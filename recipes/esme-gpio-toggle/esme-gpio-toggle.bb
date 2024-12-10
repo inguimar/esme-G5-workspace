@@ -32,7 +32,7 @@ do_compile () {
 
 do_install () {
 	# This is a guess; additional arguments may be required
-	oe_runmake install
+	oe_runmake INSTALL_DIR=${D} install
 }
 inherit pkgconfig
 DEPENDS = "libgpiod (<2.0)"
