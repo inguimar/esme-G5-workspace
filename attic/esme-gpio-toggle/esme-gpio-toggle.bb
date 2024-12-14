@@ -13,7 +13,7 @@ LICENSE = "CLOSED"
 LIC_FILES_CHKSUM = ""
 
 # No information for SRC_URI yet (only an external source tree was specified)
-SRC_URI = "git://github.com/inguimar/esme-gpio-toggle.git;protocol=https;branch=master"
+SRC_URI = ""
 
 
 # NOTE: this is a Makefile-only piece of software, so we cannot generate much of the
@@ -40,5 +40,6 @@ DEPENDS = "libgpiod (<2.0)"
 inherit update-rc.d
 INITSCRIPT_PACKAGES = "${PN}"
 INITSCRIPT_NAME = "esme-gpio26-toggle"
+EXTRA_OEMAKE = "'LDFLAGS=${LDFLAGS}'"
 
 
